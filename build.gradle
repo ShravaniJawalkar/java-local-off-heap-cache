@@ -8,6 +8,12 @@ group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 description = 'java-local-off-heap-cache'
 
+bootRun {
+    jvmArgs = [
+            '--add-opens', 'java.base/java.lang=ALL-UNNAMED'
+    ]
+}
+
 java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(21)

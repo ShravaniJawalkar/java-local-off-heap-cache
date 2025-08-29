@@ -15,6 +15,7 @@ import javax.cache.CacheManager;
 import javax.cache.Caching;
 
 @Configuration
+@EnableCaching
 public class AppConfig {
     @Bean
     public JCacheCacheManager cacheManager() {
@@ -24,7 +25,7 @@ public class AppConfig {
                 CacheConfigurationBuilder.newCacheConfigurationBuilder(
                         Object.class, Object.class,
                         ResourcePoolsBuilder.newResourcePoolsBuilder()
-                                .heap(100, MemoryUnit.MB)
+                                .heap(100, EntryUnit.ENTRIES)
                 ).build();
 
         org.ehcache.config.Configuration config = ConfigurationBuilder.newConfigurationBuilder()
