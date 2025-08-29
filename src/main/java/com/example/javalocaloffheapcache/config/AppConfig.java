@@ -21,7 +21,7 @@ public class AppConfig {
                 CacheConfigurationBuilder.newCacheConfigurationBuilder(
                     String.class, String.class,
                     ResourcePoolsBuilder.newResourcePoolsBuilder()
-                        .offheap(5, MemoryUnit.MB)
+                        .heap(5, MemoryUnit.MB)
                 )
                 .withExpiry(ExpiryPolicyBuilder.timeToLiveExpiration(Duration.ofSeconds(3600)))
             )
