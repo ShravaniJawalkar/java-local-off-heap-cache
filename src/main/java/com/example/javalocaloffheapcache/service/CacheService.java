@@ -16,17 +16,17 @@ public class CacheService {
             "key4", "Data4"
     );
 
-    @Cacheable(value = "cacheDetails", key = "#key")
+    @Cacheable(value = "testcache", key = "#key")
     public String getCacheData(String key) {
         return caches.get(key);
     }
 
-    @CachePut(value = "cacheDetails", cacheNames = "cacheValue", key = "#key")
+    @CachePut(value = "testcache", key = "#key")
     public void putCacheData(String key, String cacheValue) {
         //caches.put(key, cacheValue);
     }
 
-    @CacheEvict(key = "#key", allEntries = true, value = "cacheDetails")
+    @CacheEvict(key = "#key", allEntries = true, value = "testcache")
     public void evictCacheData(String key) {
         //caches.remove(key);
     }
