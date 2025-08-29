@@ -18,6 +18,11 @@ public class CacheService {
 
     @Cacheable(value = "testcache", key = "#key")
     public String getCacheData(String key) {
+        try{
+            Thread.sleep(3000); // Simulate a delay to mimic a time-consuming operation
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         return caches.get(key);
     }
 

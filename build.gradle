@@ -24,8 +24,7 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     // Ehcache core
     implementation 'org.ehcache:ehcache:3.10.8'
-    // Jetty util for disk persistence
-    implementation 'org.eclipse.jetty:jetty-util:11.0.20'
+    implementation 'org.springframework:spring-context-support'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
