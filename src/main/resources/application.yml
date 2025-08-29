@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: java-local-off-heap-cache
+  cache:
+    jcache:
+      provider: org.ehcache.jsr107.EhcacheCachingProvider
+      config: ehcache.xml
+
